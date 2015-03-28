@@ -7,7 +7,7 @@ config::setRowGrid(3);
 
 config::setDbHost('localhost');
 config::setDbDriver('pgsql'); // pgsql
-config::setDbName('proyecto_final');
+config::setDbName('proyecto_sainera');
 config::setDbPort(5432); // 5432
 config::setDbUser('postgres');
 config::setDbPassword('sena');
@@ -29,8 +29,8 @@ if (config::getDbUnixSocket() !== null) {
   );
 }
 
-config::setPathAbsolute('/var/www/html/proyecto_porcicola_sainera/');
-config::setUrlBase('http://localhost/proyecto_porcicola_sainera/web/');
+config::setPathAbsolute('/var/www/html/Proyecto_PorcicolaSainera/');
+config::setUrlBase('http://localhost/Proyecto_PorcicolaSainera/web/');
 
 config::setScope('dev'); // prod
 
@@ -54,7 +54,7 @@ config::setHeaderExcel2007('Content-Type: application/vnd.openxmlformats-officed
 
 config::setCookieNameRememberMe('mvcSiteRememberMe');
 config::setCookieNameSite('mvcSite');
-config::setCookiePath('/proyecto_porcicola_sainera/web/' . config::getIndexFile());
+config::setCookiePath('/Proyecto_PorcicolaSainera/web/' . config::getIndexFile());
 config::setCookieDomain('http://localhost/');
 config::setCookieTime(3600 * 8); // una hora en segundo 3600 y por 8 serían 8 horas
 

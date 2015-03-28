@@ -211,3 +211,8 @@ vacunacion:
     security: true
     credentials:
       - [admin]
+      
+  deleteFiltersVacunacion:
+    security: true
+    credentials:
+      - [admin]

@@ -32,6 +32,18 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
                 $ids = array(
                     detalleVacunacionTableClass::ID => $id
                 );
+                 if (!is_numeric($id_porcino)) {
+                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Porcino');
+                }
+                 if (!is_numeric($id_insumo)) {
+                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Insumo');
+                }
+                 if($cantidad == '' or !isset($cantidad) or $cantidad == null){
+                    throw new PDOException(i18n::__(10004, null, 'errors')); 
+                }
+                 if (!is_numeric($cantidad)) {
+                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Cantidad');
+                }
                 $data = array(
                     detalleVacunacionTableClass::ID_DOC => $id_doc,
                     ciudadTableClass::DEPARTAMENTO => $id_departamento

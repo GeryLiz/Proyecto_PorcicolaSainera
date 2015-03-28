@@ -12,18 +12,7 @@
                     <input name="<?php echo detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID, true) ?>" value="<?php echo $objDetalleVacunacion[0]->id ?>" type="hidden">
                 <?php endif ?>
                 <table class="table"> 
-                    <tr>
-                        <th>
-                            <?php echo i18n::__('id_document', null, 'detalleVacunacion') ?>: 
-                            <select name="<?php echo detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_DOC, true) ?>">
-                                <?php foreach ($objVacuna as $key): ?>
-                                    <option value="<?php echo $key->$idVacuna ?>">
-                                        <?php echo $key->$idVacuna ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </th>
-                    </tr>
+                   
                     <tr>
                         <th>
                             <?php echo i18n::__('porcine', null, 'montar') ?>: 

@@ -29,7 +29,7 @@ class deleteSelectDetalleVacunacionActionClass extends controllerClass implement
                     detalleVacunacionTableClass::delete($ids, true);
                 }
 
-                routing::getInstance()->redirect('vacunacion', 'indexDetalleVacunacion');
+                routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
                 session::getInstance()->setSuccess(i18n::__('massDeleteRegister'));
                 log::register(i18n::__('deleteMass'), detalleVacunacionTableClass::getNameTable());
             } else {

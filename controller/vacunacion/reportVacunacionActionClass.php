@@ -7,6 +7,7 @@ use mvc\request\requestClass as request;
 use mvc\routing\routingClass as routing;
 use mvc\session\sessionClass as session;
 use mvc\i18n\i18nClass as i18n;
+use hook\log\logHookClass as log;
 
 /**
  * Description of ejemploClass
@@ -17,13 +18,16 @@ class reportVacunacionActionClass extends controllerClass implements controllerA
 
     public function execute() {
         try {
+             
             $fields = array(
                 vacunacionTableClass::ID,
                 vacunacionTableClass::FECHA,
                 vacunacionTableClass::USUARIO_ID
             );
-            $this->mensaje = "Informe de tal cosa";
+            $this->mensaje = "Informe del Control de Vacunacion";
             $this->objVacunacion = vacunacionTableClass::getAll($fields, true);
+         
+                log::register(i18n::__('report'), vacunacionTableClass::getNameTable());
             $this->defineView('report', 'vacunacion', session::getInstance()->getFormatOutput());
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);

@@ -803,10 +803,25 @@ vacunacion_reporte:
     - model/bitacoraTableClass.php
     - model/base/detalleVacunacionBaseTableClass.php
     - model/detalleVacunacionTableClass.php
+   
+detalleVacunacion_reporte:
+  url:    /detalleVacunacion/reporte
+  param:  { module: vacunacion, action: reportDetalleVacunacion, format: pdf }
+  load:
+    - libs/fpdf/fpdf.php
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
     
 vacunacion_deleteFiltersVacunacion:
   url:     /borrar_filtros/vacunacion
   param: { module: vacunacion, action: deleteFiltersVacunacion, format: html }
+  load:
+
 
 vacunacion_view:
   url:    /vacunacion/vista
@@ -876,6 +891,7 @@ detalleVacunacion_edit:
     - model/insumoTableClass.php
     - model/base/hojaDeVidaBaseTableClass.php
     - model/hojaDeVidaTableClass.php
+   
 
 detalleVacunacion_update:
   url:    /detalleVacunacion/actualizar

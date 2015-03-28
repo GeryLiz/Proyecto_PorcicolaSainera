@@ -30,6 +30,9 @@ class updateVacunacionActionClass extends controllerClass implements controllerA
                 $ids = array(
                     vacunacionTableClass::ID => $id
                 );
+                 if (!is_numeric($usuario_id)) {
+                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Empleado');
+                }
                 $data = array(
                     vacunacionTableClass::FECHA => $fecha,
                     vacunacionTableClass::USUARIO_ID => $usuario_id

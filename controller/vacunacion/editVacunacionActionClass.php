@@ -8,6 +8,7 @@ use mvc\routing\routingClass as routing;
 use mvc\session\sessionClass as session;
 use mvc\i18n\i18nClass as i18n;
 
+
 /**
  * Description of ejemploClass
  *
@@ -34,6 +35,7 @@ class editVacunacionActionClass extends controllerClass implements controllerAct
 
                 $this->objUsuario = empleadoTableClass::getAll($fieldsUsuario, true);
                 $this->objVacunacion = vacunacionTableClass::getAll($fields, true, null, null, null, null, $where);
+              
                 $this->defineView('edit', 'vacunacion', session::getInstance()->getFormatOutput());
             } else {
                 routing::getInstance()->redirect('vacunacion', 'indexVacunacion');

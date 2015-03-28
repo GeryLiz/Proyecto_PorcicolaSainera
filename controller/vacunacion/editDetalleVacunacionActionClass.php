@@ -9,6 +9,7 @@ use mvc\session\sessionClass as session;
 use mvc\i18n\i18nClass as i18n;
 
 
+
 /**
  * Description of ejemploClass
  *
@@ -41,10 +42,11 @@ class editDetalleVacunacionActionClass extends controllerClass implements contro
                     vacunacionTableClass::ID
                 );
 
-                $this->objPorcino = hojaDeVIdaTableClass::getAll($fieldsPorcino, true);
+                $this->objPorcino = hojaDeVidaTableClass::getAll($fieldsPorcino, true);
                 $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
                 $this->objVacuna = vacunacionTableClass::getAll($fieldsVacuna, true);
                 $this->objDetalleVacunacion = detalleVacunacionTableClass::getAll($fields, true, null, null, null, null, $where);
+              
                 $this->defineView('edit', 'detalleVacunacion', session::getInstance()->getFormatOutput());
             } else {
                 routing::getInstance()->redirect('vacunacion', 'indexDetalleVacunacion');

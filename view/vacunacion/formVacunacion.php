@@ -17,7 +17,7 @@
          </tr>
          <tr>
       <th>
-      <?php echo i18n::__('user_id', null, 'hojaDeVida') ?>: 
+      <?php echo i18n::__('employee') ?>: 
 
        <select name=" <?php echo vacunacionTableClass::getNameField(vacunacionTableClass::USUARIO_ID, true) ?>">
         <?php foreach ($objUsuario as $key): ?>
