@@ -1,0 +1,157 @@
+# Diccionario de ejemplo
+culture:                  Español
+dictionary:
+  default:
+    module:               Modulos
+    Vacunation:           Vacunacion
+    user:                 Usuario
+    pass:                 Contraseña
+    register:             Registrar
+    update:               Actualizar
+    registerUpdate:       Registro Actualizado
+    view:                 Visualizar
+    registerInsert:       Registro Insertado 
+    delete:               Eliminar
+    registerDelete:       Registro Eliminado
+    deleteMass:           ELiminar Masivo
+    massDeleteRegister:   ELiminar Registros en Masa
+    create:               Crear
+    confirmDeleteMasive:  Confirmar Eliminado Masivo
+    want to delete the record?: ¿Desea eliminar el Registro?
+    action:               Acciones
+    confirmDelete:        Confirmar ELiminar
+    new:                  Nuevo
+    remove:               Eliminar
+    report:               Reporte
+    filterBy:             Filtrar Por
+    filters:              Filtros
+    removeFilters:        Eliminar Filtros
+        
+  credencial:
+    new:                 NUEVA CREDENCIAL
+    name:                Nombre
+    editCredential:      EDITAR LA CREDENCIAL
+    
+  datoUsuario:
+    name:                Nombre
+    last_name:           Apellidos
+    phone:               Telefono
+    address:             Direccion
+    writ:                Cedula
+    newUserData:         NUEVO DATOS DE USUARIO
+    editUserData:        EDITAR LOS DATOS DE USUARIO
+    
+  raza:
+    newRaza:             NUEVA RAZA
+    editRaza:            EDITAR RAZA
+    
+  ciudad:
+    department:          Departamento
+    newCity:             NUEVA CIUDAD
+    editCity:            EDITAR LA CIUDAD
+    
+  departamento:
+    newDepartment:       NUEVO DEPARTAMENTO
+    editDepartment:      EDITAR EL DEPARTAMENTO
+    
+  vacunacion:
+    newVaccination:      NUEVA VACUNACION
+    editVaccination:     EDITAR LA VACUNACION
+    vaccination:         VACUNACION
+    id_doc:              Id del Documento
+    date:                Fecha
+    user:                Usuario
+    
+  detalleFacturaCompraInsumo:
+    newDetailBillPurchaseInput:  Nuevo Detalle de Factura de Compra de Insumo
+    editDetailBillPurchaseInput: Editar el Detalle de Factura de Compra de Insumo
+    id_bill:             Id factura
+    id:                  Id
+    quantity:            Cantidad
+    price:               Precio
+    
+  detalleVacunacion:
+    newDetailVaccination:        NUEVO DETALLE DE VACUNACION
+    editDetailVaccination:       EDITAR EL DETALLE DE VACUNACION
+    id_document:                 Id Documento
+    insumo:                      Id Insumo
+    detailVaccination:           DETALLE VACUNACION
+    
+  facturaCompraInsumo:  
+    newBillPurchaseInput:        Nueva Factura de Compra de Insumo 
+    editBillPurchaseInput:       Editar la Factura de Compra de Insumo
+    iva:                 Iva
+    subtotal:            Subtotal
+    total:               Total
+    
+  modulo:
+    location:            Ubicacion
+    size:                Tamaño
+    
+    edtiModulo:          EDITAR MODULO
+    newModulo:           NUEVO MODULO
+    
+  insumo:
+    value:               Valor
+    manufacturing:       Fabricacion
+    expiration:          Vencimiento
+    line:                Linea
+    presentation:        Presentacion
+    newInput:            NUEVO INSUMO
+    editInput:           EDITAR INSUMO
+    
+  presentacion:
+    newPresentation:     NUEVA PRESENTACION
+    editPresentation:    EDITAR LA PRESENTACION
+    
+  linea:
+    newLine:             NUEVA LINEA
+    editLine:            EDITAR LINEA
+    
+  montar:
+    date:                Fecha
+    fecundador:          Porcino Fecundador
+    state:               Estado
+    fertilization:       Fecha Fertilizacción
+    porcine:             Porcino
+    race:                Raza
+    newMount:            NUEVO REGISTRO MONTAR
+    editMount:           EDITAR REGISTRO MONTAR
+    
+  hojaDeVida:
+    age:                 Edad
+    weight:              Peso
+    gender:              Genero
+    quantity_births:     Cantidad de partos
+    date_entry:          Fecha de ingreso
+    module:              Modulo
+    user_id:             Usuario_Id
+    newHoja:             Registro de una nueva hoja de vida
+    editHoja:            Editar hoja de vida
+    
+  gestacion:
+    number_males:        Numero Machos
+    number_females:      Numero Hembras
+    number_living:       Numero Vivos
+    number_dead:         Numero Muertos
+    responsible:         Responsable
+    date_delivery:       Fecha Parto
+    newGestation:        NUEVA GESTACION
+    editGestation:       EDITAR LA GESTACION
+    
+  bodega:
+    editCellar:          EDITAR LA BODEGA
+    newCellar:           NUEVA BODEGA
+    
+  errors:
+    00001:                El módulo y la acción solicitada, no existe.
+    00002:                La dirección que solicita no está registrada.
+    00003:                Los datos de usuario y contrseña son inválidos.
+    10003:                Datos Incorrectos
+    10004:                Falto llenar campos
+    10005:                Hay datos que deben ser numeros
+#    00001:  Lo que buscas no existe
+#    10001:  Existe un error en la definición de los includes
+#    10002:  No hay definido un ambito (dev o prod) para la aplicación
+#    10003:  El arhivo %file% no existe
+#    10004:  El directorio %path% no pudo ser creado

@@ -1,0 +1,213 @@
+shfSecurity:
+  index:
+    security: false
+  login:
+    security: false
+  logout:
+    security: true
+  noPermission:
+    security: false
+  exception:
+    security: false
+
+default:
+  index:
+    security: true
+    credentials:
+      - [admin, usuario]
+  insert:
+    security: true
+
+porcino:
+  indexHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  insertHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  createHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  editHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  updateHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteHojaDeVida:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteSelectHojaDeVida:
+    security: true
+    credentials:
+      - [admin]
+      
+  indexRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  insertRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  createRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  editRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  updateRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteRaza:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteSelectRaza:
+    security: true
+    credentials:
+      - [admin]
+      
+  indexModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  insertModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  createModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  editModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  updateModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteModulo:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteSelectModulo:
+    security: true
+    credentials:
+      - [admin]
+      
+  report:
+    security: true
+    credentials:
+      - [admin]
+      
+vacunacion:
+  indexVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+  createVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+     
+  insertVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  editVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  updateVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteSelectVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+  reportVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+  viewVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+  indexDetalleVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+  createDetalleVacunacion:
+    security: true
+    credentials:
+      - [admin]
+      
+     
+  insertDetalleVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  editDetalleVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  updateDetalleVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteDetalleVacunacion:
+    security: true
+    credentials: 
+      - [admin]
+      
+  deleteSelectDetalleVacunacion:
+    security: true
+    credentials:
+      - [admin]

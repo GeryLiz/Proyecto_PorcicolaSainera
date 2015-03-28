@@ -1,0 +1,1195 @@
+homepage:
+  url:    /
+  param:  { module: home, action: index, format: html }
+
+
+##-------------------------- shfSecurity --------------------------##
+shfSecurity_index:
+  url:    /signin
+  param:  { module: shfSecurity, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+shfSecurity_login:
+  url:    /login
+  param:  { module: shfSecurity, action: login, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/usuarioCredencialBaseTableClass.php
+    - model/usuarioCredencialTableClass.php
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+    - model/base/recordarMeBaseTableClass.php
+    - model/recordarMeTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+shfSecurity_logout:
+  url:    /logout
+  param:  { module: shfSecurity, action: logout, format: html }
+  load:
+    - model/base/recordarMeBaseTableClass.php
+    - model/recordarMeTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+shfSecurity_noPermission:
+  url:    /sin_permisos
+  param:  { module: shfSecurity, action: noPermission, format: html }
+
+shfSecurity_exception:
+  url:    /exception
+  param:  { module: shfSecurity, action: exception, format: html }
+##-------------------------- shfSecurity --------------------------##
+
+##-------------------------- EJEMPLO --------------------------##
+default_index:
+  url:    /usuarios/index
+  param:  { module: default, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_insert:
+  url:    /usuarios/insertar
+  param:  { module: default, action: insert, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_create:
+  url:    /usuarios/crear
+  param:  { module: default, action: create, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_edit:
+  url:    /usuario/editar
+  param:  { module: default, action: edit, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_update:
+  url:    /usuario/actualizar
+  param:  { module: default, action: update, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_delete:
+  url:    /usuario/eliminar
+  param:  { module: default, action: delete, format: json }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_deleteSelect:
+  url:    /usuario/eliminarSeleccion
+  param:  { module: default, action: deleteSelect, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+default_reporte:
+  url:    /usuario/reporte
+  param:  { module: default, action: report, format: pdf }
+  load:
+    - libs/fpdf/fpdf.php
+##-------------------------- EJEMPLO --------------------------##
+
+
+
+credencial_index:
+  url:    /credencial/index
+  param:  { module: credencial, action: index, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_insert:
+  url:    /credencial/insertar
+  param:  { module: credencial, action: insert, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_create:
+  url:    /credencial/crear
+  param:  { module: credencial, action: create, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_edit:
+  url:    /credencial/editar
+  param:  { module: credencial, action: edit, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_update:
+  url:    /credencial/actualizar
+  param:  { module: credencial, action: update, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_delete:
+  url:    /credencial/eliminar
+  param:  { module: credencial, action: delete, format: json }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+
+credencial_deleteSelect:
+  url:    /credencial/eliminarSeleccion
+  param:  { module: credencial, action: deleteSelect, format: html }
+  load:
+    - model/base/credencialBaseTableClass.php
+    - model/credencialTableClass.php
+ ##---------------------------------------------------------------------##
+ 
+datoUsuario_index:
+  url:    /datoUsuario/index
+  param:  { module: datoUsuario, action: index, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_insert:
+  url:    /datoUsuario/insertar
+  param:  { module: datoUsuario, action: insert, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_create:
+  url:    /datoUsuario/crear
+  param:  { module: datoUsuario, action: create, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_edit:
+  url:    /datoUsuario/editar
+  param:  { module: datoUsuario, action: edit, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_update:
+  url:    /datoUsuario/actualizar
+  param:  { module: datoUsuario, action: update, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_delete:
+  url:    /datoUsuario/eliminar
+  param:  { module: datoUsuario, action: delete, format: json }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+
+datoUsuario_deleteSelect:
+  url:    /datoUsuario/eliminarSeleccion
+  param:  { module: datoUsuario, action: deleteSelect, format: html }
+  load:
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
+    
+    
+ ##---------------------------------------------------------------------##
+ 
+departamento_index:
+  url:    /departamento/index
+  param:  { module: departamento, action: index, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_insert:
+  url:    /departamento/insertar
+  param:  { module: departamento, action: insert, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_create:
+  url:    /departamento/crear
+  param:  { module: departamento, action: create, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_edit:
+  url:    /departamento/editar
+  param:  { module: departamento, action: edit, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_update:
+  url:    /departamento/actualizar
+  param:  { module: departamento, action: update, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_delete:
+  url:    /departamento/eliminar
+  param:  { module: departamento, action: delete, format: json }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+departamento_deleteSelect:
+  url:    /departamento/eliminarSeleccion
+  param:  { module: departamento, action: deleteSelect, format: html }
+  load:
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+ciudad_index:
+  url:    /ciudad/index
+  param:  { module: ciudad, action: index, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+ciudad_insert:
+  url:    /ciudad/insertar
+  param:  { module: ciudad, action: insert, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+ciudad_create:
+  url:    /ciudad/crear
+  param:  { module: ciudad, action: create, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+ciudad_edit:
+  url:    /ciudad/editar
+  param:  { module: ciudad, action: edit, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/departamentoBaseTableClass.php
+    - model/departamentoTableClass.php
+
+ciudad_update:
+  url:    /ciudad/actualizar
+  param:  { module: ciudad, action: update, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+ciudad_delete:
+  url:    /ciudad/eliminar
+  param:  { module: ciudad, action: delete, format: json }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+ciudad_deleteSelect:
+  url:    /ciudad/eliminarSeleccion
+  param:  { module: ciudad, action: deleteSelect, format: html }
+  load:
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+raza_index:
+  url:    /raza/index
+  param:  { module: porcino, action: indexRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+raza_insert:
+  url:    /raza/insertar
+  param:  { module: porcino, action: insertRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+
+raza_create:
+  url:    /raza/crear
+  param:  { module: porcino, action: createRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+raza_edit:
+  url:    /raza/editar
+  param:  { module: porcino, action: editRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+
+raza_update:
+  url:    /raza/actualizar
+  param:  { module: porcino, action: updateRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+raza_delete:
+  url:    /raza/eliminar
+  param:  { module: porcino, action: deleteRaza, format: json }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+raza_deleteSelect:
+  url:    /raza/eliminarSeleccion
+  param:  { module: porcino, action: deleteSelectRaza, format: html }
+  load:
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+    
+##---------------------------------------------------------------------##
+ 
+bodega_index:
+  url:    /bodega/index
+  param:  { module: bodega, action: index, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_insert:
+  url:    /bodega/insertar
+  param:  { module: bodega, action: insert, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_create:
+  url:    /bodega/crear
+  param:  { module: bodega, action: create, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_edit:
+  url:    /bodega/editar
+  param:  { module: bodega, action: edit, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_update:
+  url:    /bodega/actualizar
+  param:  { module: bodega, action: update, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_delete:
+  url:    /bodega/eliminar
+  param:  { module: bodega, action: delete, format: json }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+
+bodega_deleteSelect:
+  url:    /bodega/eliminarSeleccion
+  param:  { module: bodega, action: deleteSelect, format: html }
+  load:
+    - model/base/bodegaBaseTableClass.php
+    - model/bodegaTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+modulo_index:
+  url:    /modulo/index
+  param:  { module: porcino, action: indexModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+modulo_insert:
+  url:    /modulo/insertar
+  param:  { module: porcino, action: insertModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+
+modulo_create:
+  url:    /modulo/crear
+  param:  { module: porcino, action: createModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+
+modulo_edit:
+  url:    /modulo/editar
+  param:  { module: porcino, action: editModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+
+modulo_update:
+  url:    /modulo/actualizar
+  param:  { module: porcino, action: updateModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+modulo_delete:
+  url:    /modulo/eliminar
+  param:  { module: porcino, action: deleteModulo, format: json }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+modulo_deleteSelect:
+  url:    /modulo/eliminarSeleccion
+  param:  { module: porcino, action: deleteSelectModulo, format: html }
+  load:
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+insumo_index:
+  url:    /insumo/index
+  param:  { module: insumo, action: index, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+
+insumo_insert:
+  url:    /insumo/insertar
+  param:  { module: insumo, action: insert, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+insumo_create:
+  url:    /insumo/crear
+  param:  { module: insumo, action: create, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+
+insumo_edit:
+  url:    /insumo/editar
+  param:  { module: insumo, action: edit, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+insumo_update:
+  url:    /insumo/actualizar
+  param:  { module: insumo, action: update, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+
+insumo_delete:
+  url:    /insumo/eliminar
+  param:  { module: insumo, action: delete, format: json }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+
+insumo_deleteSelect:
+  url:    /insumo/eliminarSeleccion
+  param:  { module: insumo, action: deleteSelect, format: html }
+  load:
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+hojaDeVida_index:
+  url:    /hojaDeVida/index
+  param:  { module: porcino, action: indexHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+hojaDeVida_insert:
+  url:    /hojaDeVida/insertar
+  param:  { module: porcino, action: insertHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+
+hojaDeVida_create:
+  url:    /hojaDeVida/crear
+  param:  { module: porcino, action: createHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+hojaDeVida_edit:
+  url:    /hojaDeVida/editar
+  param:  { module: porcino, action: editHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/moduloBaseTableClass.php
+    - model/moduloTableClass.php
+    
+hojaDeVida_update:
+  url:    /hojaDeVida/actualizar
+  param:  { module: porcino, action: updateHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+   
+
+hojaDeVida_delete:
+  url:    /hojaDeVida/eliminar
+  param:  { module: porcino, action: deleteHojaDeVida, format: json }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+hojaDeVida_deleteSelect:
+  url:    /hojaDeVida/eliminarSeleccion
+  param:  { module: porcino, action: deleteSelectHojaDeVida, format: html }
+  load:
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+hojaDeVida_reporte:
+  url:    /hojaDeVida/reporte
+  param:  { module: porcino, action: report, format: pdf }
+  load:
+    - libs/fpdf/fpdf.php
+    
+hojaDeVida_deleteFilters:
+  url:     /borrar_filtros/hojaDeVida
+  param: { module: porcino, action: deleteFilters, format: html }
+    
+##---------------------------------------------------------------------##
+ 
+montar_index:
+  url:    /montar/index
+  param:  { module: montar, action: index, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+
+montar_insert:
+  url:    /montar/insertar
+  param:  { module: montar, action: insert, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+
+montar_create:
+  url:    /montar/crear
+  param:  { module: montar, action: create, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+
+montar_edit:
+  url:    /montar/editar
+  param:  { module: montar, action: edit, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+    - model/base/razaBaseTableClass.php
+    - model/razaTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+
+montar_update:
+  url:    /montar/actualizar
+  param:  { module: montar, action: update, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+
+montar_delete:
+  url:    /montar/eliminar
+  param:  { module: montar, action: delete, format: json }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+
+montar_deleteSelect:
+  url:    /montar/eliminarSeleccion
+  param:  { module: montar, action: deleteSelect, format: html }
+  load:
+    - model/base/montarBaseTableClass.php
+    - model/montarTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+vacunacion_index:
+  url:    /vacunacion/index
+  param:  { module: vacunacion, action: indexVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+
+vacunacion_insert:
+  url:    /vacunacion/insertar
+  param:  { module: vacunacion, action: insertVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+
+vacunacion_create:
+  url:    /vacunacion/crear
+  param:  { module: vacunacion, action: createVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+vacunacion_edit:
+  url:    /vacunacion/editar
+  param:  { module: vacunacion, action: editVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+
+vacunacion_update:
+  url:    /vacunacion/actualizar
+  param:  { module: vacunacion, action: updateVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+vacunacion_delete:
+  url:    /vacunacion/eliminar
+  param:  { module: vacunacion, action: deleteVacunacion, format: json }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+
+vacunacion_deleteSelect:
+  url:    /vacunacion/eliminarSeleccion
+  param:  { module: vacunacion, action: deleteSelectVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+
+    - model/bitacoraTableClass.php
+
+vacunacion_reporte:
+  url:    /vacunacion/reporte
+  param:  { module: vacunacion, action: reportVacunacion, format: pdf }
+  load:
+    - libs/fpdf/fpdf.php
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    
+vacunacion_deleteFiltersVacunacion:
+  url:     /borrar_filtros/vacunacion
+  param: { module: vacunacion, action: deleteFiltersVacunacion, format: html }
+
+vacunacion_view:
+  url:    /vacunacion/vista
+  param:  { module: vacunacion, action: viewVacunacion, format: html }
+  load:
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    
+
+    
+detalleVacunacion_index:
+  url:    /detalleVacunacion/index
+  param:  { module: vacunacion, action: indexDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+
+detalleVacunacion_insert:
+  url:    /detalleVacunacion/insertar
+  param:  { module: vacunacion, action: insertDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+     
+
+detalleVacunacion_create:
+  url:    /detalleVacunacion/crear
+  param:  { module: vacunacion, action: createDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+
+detalleVacunacion_edit:
+  url:    /detalleVacunacion/editar
+  param:  { module: vacunacion, action: editDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - model/base/vacunacionBaseTableClass.php
+    - model/vacunacionTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+
+detalleVacunacion_update:
+  url:    /detalleVacunacion/actualizar
+  param:  { module: vacunacion, action: updateDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+
+detalleVacunacion_delete:
+  url:    /detalleVacunacionFacturaCompraInsumo/eliminar
+  param:  { module: vacunacion, action: deleteDetalleVacunacion, format: json }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+detalleVacunacion_deleteSelect:
+  url:    /detalleVacunacion/eliminarSeleccion
+  param:  { module: vacunacion, action: deleteSelectDetalleVacunacion, format: html }
+  load:
+    - model/base/detalleVacunacionBaseTableClass.php
+    - model/detalleVacunacionTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+    
+##---------------------------------------------------------------------##
+ 
+facturaCompraInsumo_index:
+  url:    /facturaCompraInsumo/index
+  param:  { module: facturaCompraInsumo, action: index, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+
+facturaCompraInsumo_insert:
+  url:    /facturaCompraInsumo/insertar
+  param:  { module: facturaCompraInsumo, action: insert, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php    
+
+facturaCompraInsumo_create:
+  url:    /facturaCompraInsumo/crear
+  param:  { module: facturaCompraInsumo, action: create, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php  
+
+facturaCompraInsumo_edit:
+  url:    /facturaCompraInsumo/editar
+  param:  { module: facturaCompraInsumo, action: edit, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php 
+
+facturaCompraInsumo_update:
+  url:    /facturaCompraInsumo/actualizar
+  param:  { module: facturaCompraInsumo, action: update, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php 
+
+facturaCompraInsumo_delete:
+  url:    /facturaCompraInsumo/eliminar
+  param:  { module: facturaCompraInsumo, action: delete, format: json }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+
+facturaCompraInsumo_deleteSelect:
+  url:    /facturaCompraInsumo/eliminarSeleccion
+  param:  { module: facturaCompraInsumo, action: deleteSelect, format: html }
+  load:
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+detalleFacturaCompraInsumo_index:
+  url:    /detalleFacturaCompraInsumo/index
+  param:  { module: detalleFacturaCompraInsumo, action: index, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+
+detalleFacturaCompraInsumo_insert:
+  url:    /detalleFacturaCompraInsumo/insertar
+  param:  { module: detalleFacturaCompraInsumo, action: insert, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+    
+     
+
+detalleFacturaCompraInsumo_create:
+  url:    /detalleFacturaCompraInsumo/crear
+  param:  { module: detalleFacturaCompraInsumo, action: create, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+    
+
+detalleFacturaCompraInsumo_edit:
+  url:    /detalleFacturaCompraInsumo/editar
+  param:  { module: detalleFacturaCompraInsumo, action: edit, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+    - model/base/facturaCompraInsumoBaseTableClass.php
+    - model/facturaCompraInsumoTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
+
+detalleFacturaCompraInsumo_update:
+  url:    /detalleFacturaCompraInsumo/actualizar
+  param:  { module: detalleFacturaCompraInsumo, action: update, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+    
+
+detalleFacturaCompraInsumo_delete:
+  url:    /detalleFacturaCompraInsumo/eliminar
+  param:  { module: detalleFacturaCompraInsumo, action: delete, format: json }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+
+detalleFacturaCompraInsumo_deleteSelect:
+  url:    /detalleFacturaCompraInsumo/eliminarSeleccion
+  param:  { module: detalleFacturaCompraInsumo, action: deleteSelect, format: html }
+  load:
+    - model/base/detalleFacturaCompraInsumoBaseTableClass.php
+    - model/detalleFacturaCompraInsumoTableClass.php
+    
+ ##---------------------------------------------------------------------##
+ 
+gestacion_index:
+  url:    /gestacion/index
+  param:  { module: gestacion, action: index, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+
+gestacion_insert:
+  url:    /gestacion/insertar
+  param:  { module: gestacion, action: insert, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+
+gestacion_create:
+  url:    /gestacion/crear
+  param:  { module: gestacion, action: create, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+
+gestacion_edit:
+  url:    /gestacion/editar
+  param:  { module: gestacion, action: edit, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
+
+gestacion_update:
+  url:    /gestacion/actualizar
+  param:  { module: gestacion, action: update, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+
+gestacion_delete:
+  url:    /gestacion/eliminar
+  param:  { module: gestacion, action: delete, format: json }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+
+gestacion_deleteSelect:
+  url:    /gestacion/eliminarSeleccion
+  param:  { module: gestacion, action: deleteSelect, format: html }
+  load:
+    - model/base/gestacionBaseTableClass.php
+    - model/gestacionTableClass.php
+    
+##---------------------------------------------------------------------##
+ 
+linea_index:
+  url:    /linea/index
+  param:  { module: linea, action: index, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+linea_insert:
+  url:    /linea/insertar
+  param:  { module: linea, action: insert, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+  
+linea_create:
+  url:    /linea/crear
+  param:  { module: linea, action: create, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+linea_edit:
+  url:    /linea/editar
+  param:  { module: linea, action: edit, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+
+linea_update:
+  url:    /linea/actualizar
+  param:  { module: linea, action: update, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+linea_delete:
+  url:    /linea/eliminar
+  param:  { module: linea, action: delete, format: json }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+linea_deleteSelect:
+  url:    /linea/eliminarSeleccion
+  param:  { module: linea, action: deleteSelect, format: html }
+  load:
+    - model/base/lineaBaseTableClass.php
+    - model/lineaTableClass.php
+
+    
+##---------------------------------------------------------------------##
+ 
+presentacion_index:
+  url:    /presentacion/index
+  param:  { module: presentacion, action: index, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+presentacion_insert:
+  url:    /presentacion/insertar
+  param:  { module: presentacion, action: insert, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+  
+presentacion_create:
+  url:    /presentacion/crear
+  param:  { module: presentacion, action: create, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+presentacion_edit:
+  url:    /presentacion/editar
+  param:  { module: presentacion, action: edit, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+
+presentacion_update:
+  url:    /presentacion/actualizar
+  param:  { module: presentacion, action: update, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+presentacion_delete:
+  url:    /presentacion/eliminar
+  param:  { module: presentacion, action: delete, format: json }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
+
+presentacion_deleteSelect:
+  url:    /presentacion/eliminarSeleccion
+  param:  { module: presentacion, action: deleteSelect, format: html }
+  load:
+    - model/base/presentacionBaseTableClass.php
+    - model/presentacionTableClass.php
