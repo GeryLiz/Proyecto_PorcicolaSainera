@@ -788,7 +788,6 @@ vacunacion_deleteSelect:
     - model/vacunacionTableClass.php
     - hooks/logHookClass.php
     - model/base/bitacoraBaseTableClass.php
-
     - model/bitacoraTableClass.php
 
 vacunacion_reporte:
@@ -803,6 +802,10 @@ vacunacion_reporte:
     - model/bitacoraTableClass.php
     - model/base/detalleVacunacionBaseTableClass.php
     - model/detalleVacunacionTableClass.php
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
    
 detalleVacunacion_reporte:
   url:    /detalleVacunacion/reporte
@@ -816,6 +819,10 @@ detalleVacunacion_reporte:
     - model/bitacoraTableClass.php
     - model/base/detalleVacunacionBaseTableClass.php
     - model/detalleVacunacionTableClass.php
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php
     
 vacunacion_deleteFiltersVacunacion:
   url:     /borrar_filtros/vacunacion
@@ -834,8 +841,15 @@ vacunacion_view:
     - model/bitacoraTableClass.php
     - model/base/detalleVacunacionBaseTableClass.php
     - model/detalleVacunacionTableClass.php
-    
+    - model/base/empleadoBaseTableClass.php
+    - model/empleadoTableClass.php
+    - model/base/insumoBaseTableClass.php
+    - model/insumoTableClass.php   
 
+vacunacion_deleteFiltersDetalleVacunacion:
+  url:     /borrar_filtros/detalleVacunacion
+  param: { module: vacunacion, action: deleteFilterDetalle, format: html }
+  
     
 detalleVacunacion_index:
   url:    /detalleVacunacion/index

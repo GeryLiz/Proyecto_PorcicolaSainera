@@ -20,6 +20,11 @@ class viewVacunacionActionClass extends controllerClass implements controllerAct
             if (request::getInstance()->hasRequest(vacunacionTableClass::ID)) {
                 $idVacunacion = request::getInstance()->getRequest(vacunacionTableClass::ID);
 
+                $fieldsInsumo = array(
+                    insumoTableClass::ID,
+                    insumoTableClass::DESCRIPCION
+                );
+
                 $fields = array(
                     detalleVacunacionTableClass::ID,
                     detalleVacunacionTableClass::ID_DOC,
@@ -30,9 +35,29 @@ class viewVacunacionActionClass extends controllerClass implements controllerAct
                 $orderBy = array(
                     detalleVacunacionTableClass::ID
                 );
+
+
                 $where = array(
                     detalleVacunacionTableClass::ID_DOC => $idVacunacion
                 );
+
+                if (request::getInstance()->hasPost('filter')) {
+                    $where = null;
+                    $filter = request::getInstance()->getPost('filter');
+                    
+                    if (isset($filter['porcino']) and $filter['porcino'] !== null and $filter['porcino'] !== '') {
+                        $where[detalleVacunacionTableClass::ID_PORCINO] = $filter['porcino'];
+                    }
+                    if (isset($filter['insumo']) and $filter['insumo'] !== null and $filter['insumo'] !== '') {
+                        $where[detalleVacunacionTableClass::ID_INSUMO] = $filter['insumo'];
+                    }
+
+                    $where[detalleVacunacionTableClass::ID_DOC] = $idVacunacion;
+                    
+                    session::getInstance()->setAttribute('detalleVacunacionFiltersAnimal', $where);
+                }elseif (session::getInstance()->hasAttribute('detalleVacunacionFiltersAnimal')) {
+                $where = session::getInstance()->getAttribute('detalleVacunacionFiltersAnimal');
+            }
 
                 $fieldsVacunacion = array(
                     vacunacionTableClass::ID,
@@ -52,12 +77,13 @@ class viewVacunacionActionClass extends controllerClass implements controllerAct
                 $f = array(
                     detalleVacunacionTableClass::ID
                 );
-                
+
                 $whereCnt = array(
-                detalleVacunacionTableClass::ID_DOC => $idVacunacion
+                    detalleVacunacionTableClass::ID_DOC => $idVacunacion
                 );
                 $lines = config::getRowGrid();
 
+                $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
                 $this->cntPages = detalleVacunacionTableClass::getAllCount($f, true, $lines, $whereCnt);
                 $this->objVacunacion = vacunacionTableClass::getAll($fieldsVacunacion, true, null, null, null, null, $whereVacunacion);
                 $this->objDetalleVacunacion = detalleVacunacionTableClass::getAll($fields, true, $orderBy, 'ASC', 10, $page, $where);

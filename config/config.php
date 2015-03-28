@@ -7,10 +7,10 @@ config::setRowGrid(3);
 
 config::setDbHost('localhost');
 config::setDbDriver('pgsql'); // pgsql
-config::setDbName('proyecto_sainera');
+config::setDbName('proyecto_final');
 config::setDbPort(5432); // 5432
 config::setDbUser('postgres');
-config::setDbPassword('sena');
+config::setDbPassword('diaz');
 // Esto solo es necesario en caso de necesitar un socket para la DB
 config::setDbUnixSocket(null);
 
