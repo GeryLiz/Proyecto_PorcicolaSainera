@@ -845,6 +845,8 @@ vacunacion_view:
     - model/empleadoTableClass.php
     - model/base/insumoBaseTableClass.php
     - model/insumoTableClass.php   
+    - model/base/hojaDeVidaBaseTableClass.php
+    - model/hojaDeVidaTableClass.php
 
 vacunacion_deleteFiltersDetalleVacunacion:
   url:     /borrar_filtros/detalleVacunacion

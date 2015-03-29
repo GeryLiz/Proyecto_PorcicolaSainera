@@ -18,6 +18,7 @@ class indexVacunacionActionClass extends controllerClass implements controllerAc
 
     public function execute() {
         try {
+            
             $where = null;
 
             if (request::getInstance()->hasPost('filter')) {
@@ -79,7 +80,11 @@ class indexVacunacionActionClass extends controllerClass implements controllerAc
 
             $this->objEmpleado = empleadoTableClass::getAll($fieldsEmpleado, true);
             $this->cntPages = vacunacionTableClass::getAllCount($f, true, $lines, $where);
-            $this->page = request::getInstance()->getGet('page');
+            if (request::getInstance()->hasGet('page')) {
+                $this->page = request::getInstance()->getGet('page');
+            }else{
+                $this->page = $page;
+            }
             $this->objPorcino = hojaDeVIdaTableClass::getAll($fieldsPorcino, true);
             $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
             $this->objVacunacion = vacunacionTableClass::getAll($fields, true, $orderBy, 'ASC', config::getRowGrid(), $page, $where);

@@ -10,7 +10,7 @@ config::setDbDriver('pgsql'); // pgsql
 config::setDbName('proyecto_final');
 config::setDbPort(5432); // 5432
 config::setDbUser('postgres');
-config::setDbPassword('diaz');
+config::setDbPassword('sena');
 // Esto solo es necesario en caso de necesitar un socket para la DB
 config::setDbUnixSocket(null);
 
@@ -32,7 +32,7 @@ if (config::getDbUnixSocket() !== null) {
 config::setPathAbsolute('/var/www/html/Proyecto_PorcicolaSainera/');
 config::setUrlBase('http://localhost/Proyecto_PorcicolaSainera/web/');
 
-config::setScope('dev'); // prod
+config::setScope('prod'); // prod
 
 if (session::getInstance()->hasDefaultCulture() === false) {
   config::setDefaultCulture('es');

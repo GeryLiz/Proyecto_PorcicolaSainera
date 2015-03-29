@@ -9,6 +9,12 @@ shfSecurity:
     security: false
   exception:
     security: false
+    
+home:
+  index:
+    security: true
+    credentials:
+      - [admin]
 
 default:
   index:

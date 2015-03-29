@@ -67,6 +67,10 @@ class viewVacunacionActionClass extends controllerClass implements controllerAct
                 $whereVacunacion = array(
                     vacunacionTableClass::ID => $idVacunacion
                 );
+                
+                $fieldsPorcino = array(
+                hojaDeVidaTableClass::ID 
+                );
 
                 $page = 0;
                 if (request::getInstance()->hasGet('page')) {
@@ -83,6 +87,7 @@ class viewVacunacionActionClass extends controllerClass implements controllerAct
                 );
                 $lines = config::getRowGrid();
 
+                $this->objPorcino = hojaDeVidaTableClass::getAll($fieldsPorcino, true);
                 $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
                 $this->cntPages = detalleVacunacionTableClass::getAllCount($f, true, $lines, $whereCnt);
                 $this->objVacunacion = vacunacionTableClass::getAll($fieldsVacunacion, true, null, null, null, null, $whereVacunacion);

@@ -20,9 +20,6 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
         try {
             if (request::getInstance()->isMethod('POST')) {
 
-//        $id = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::ID, true));
-//        $usuario = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USER, true));
-//        $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
                 $id = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID, true));
                 $id_doc = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_DOC, true));
                 $id_porcino = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_PORCINO, true));
@@ -32,29 +29,31 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
                 $ids = array(
                     detalleVacunacionTableClass::ID => $id
                 );
-                 if (!is_numeric($id_porcino)) {
-                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Porcino');
-                }
-                 if (!is_numeric($id_insumo)) {
-                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Insumo');
-                }
-                 if($cantidad == '' or !isset($cantidad) or $cantidad == null){
-                    throw new PDOException(i18n::__(10004, null, 'errors')); 
-                }
-                 if (!is_numeric($cantidad)) {
-                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Cantidad');
-                }
+//                 if (!is_numeric($id_porcino)) {
+//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Porcino');
+//                }
+//                 if (!is_numeric($id_insumo)) {
+//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Insumo');
+//                }
+//                 if($cantidad == '' or !isset($cantidad) or $cantidad == null){
+//                    throw new PDOException(i18n::__(10004, null, 'errors')); 
+//                }
+//                 if (!is_numeric($cantidad)) {
+//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Cantidad');
+//                }
                 $data = array(
-                    detalleVacunacionTableClass::ID_DOC => $id_doc,
-                    ciudadTableClass::DEPARTAMENTO => $id_departamento
+                detalleVacunacionTableClass::ID_PORCINO => $id_porcino,
+                detalleVacunacionTableClass::CANTIDAD => $cantidad,
+                detalleVacunacionTableClass::ID_INSUMO => $id_insumo
                 );
 
                 detalleVacunacionTableClass::update($ids, $data);
                 session::getInstance()->setSuccess(i18n::__('registerUpdate'));
                 log::register(i18n::__('update'), detalleVacunacionTableClass::getNameTable());
+                routing::getInstance()->getUrlWeb('vacunacion', 'indexVacunacion', array('id' => $id_doc));
             }
 
-            routing::getInstance()->redirect('vacunacion', 'indexDetalleVacunacion');
+            routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);
             routing::getInstance()->forward('shfSecurity', 'exception');
