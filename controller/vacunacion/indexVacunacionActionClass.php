@@ -84,7 +84,7 @@ class indexVacunacionActionClass extends controllerClass implements controllerAc
                 $this->page = request::getInstance()->getGet('page');
             }else{
                 $this->page = $page;
-            }
+            } 
             $this->objPorcino = hojaDeVIdaTableClass::getAll($fieldsPorcino, true);
             $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
             $this->objVacunacion = vacunacionTableClass::getAll($fields, true, $orderBy, 'ASC', config::getRowGrid(), $page, $where);

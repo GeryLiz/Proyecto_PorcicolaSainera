@@ -10,5 +10,5 @@
         </div>
     </div>
 </div>
-<?php view::includePartial('vacunacion/formVacunacion', array('objVacunacion' => $objVacunacion, 'objUsuario' => $objUsuario)) ?>
+<?php view::includePartial('vacunacion/formVacunacion', array('objUsuario' => $objUsuario)) ?>
 

@@ -222,3 +222,8 @@ vacunacion:
     security: true
     credentials:
       - [admin]
+            
+  reportDetalleVacunacion:
+    security: true
+    credentials:
+      - [admin]
