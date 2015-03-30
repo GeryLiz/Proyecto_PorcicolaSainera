@@ -27,19 +27,11 @@ class createDetalleVacunacionActionClass extends controllerClass implements cont
                 $cantidad = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::CANTIDAD, true));
 
 
-//                if (!is_numeric($id_porcino)) {
-//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Porcino');
-//                }
-//                if (!is_numeric($id_insumo)) {
-//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Insumo');
-//                }
-//                if ($cantidad == '' or !isset($cantidad) or $cantidad == null) {
-//                    throw new PDOException(i18n::__(10004, null, 'errors'));
-//                }
-//                if (!is_numeric($cantidad)) {
-//                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Cantidad');
-//                }
-
+             if(!is_numeric($cantidad)){
+                 throw new PDOException(i18n::__(10005, null, 'errors'));
+             }
+//                
+           
 
                 $data = array(
                     detalleVacunacionTableClass::ID_DOC => $id_doc,
@@ -53,7 +45,7 @@ class createDetalleVacunacionActionClass extends controllerClass implements cont
                 log::register(i18n::__('create'), detalleVacunacionTableClass::getNameTable());
                 routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
             } else {
-                session::getInstance()->setError('ola mundi');
+                session::getInstance()->setError('El Detalle de Vacunación no pudo ser insertado');
                 routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
             }
         } catch (PDOException $exc) {

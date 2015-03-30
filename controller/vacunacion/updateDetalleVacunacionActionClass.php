@@ -25,6 +25,7 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
                 $id_porcino = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_PORCINO, true));
                 $id_insumo = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_INSUMO, true));
                 $cantidad = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::CANTIDAD, true));
+                $PATH_INFO = request::getInstance()->getPost('PATH_INFO');
 
                 $ids = array(
                     detalleVacunacionTableClass::ID => $id
@@ -42,9 +43,9 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
 //                    throw new PDOException(i18n::__(10005, null, 'errors') . ' ' . 'en el campo Cantidad');
 //                }
                 $data = array(
-                detalleVacunacionTableClass::ID_PORCINO => $id_porcino,
-                detalleVacunacionTableClass::CANTIDAD => $cantidad,
-                detalleVacunacionTableClass::ID_INSUMO => $id_insumo
+                    detalleVacunacionTableClass::ID_PORCINO => $id_porcino,
+                    detalleVacunacionTableClass::CANTIDAD => $cantidad,
+                    detalleVacunacionTableClass::ID_INSUMO => $id_insumo
                 );
 
                 detalleVacunacionTableClass::update($ids, $data);
@@ -53,7 +54,8 @@ class updateDetalleVacunacionActionClass extends controllerClass implements cont
                 routing::getInstance()->getUrlWeb('vacunacion', 'indexVacunacion', array('id' => $id_doc));
             }
 
-            routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
+            $dir = config::getUrlBase() . config::getIndexFile() . $PATH_INFO . '?' . 'id' . '=' . $id_doc;
+            header('location: ' . $dir);
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);
             routing::getInstance()->forward('shfSecurity', 'exception');

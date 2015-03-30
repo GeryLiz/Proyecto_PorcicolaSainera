@@ -34,6 +34,7 @@ dictionary:
     viewDetail:           Ver Detalle
     insertDetail:         Insertar Detalle
     search:               Buscar
+    filterReport:         Filtros de Informe
     
         
   credencial:

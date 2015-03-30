@@ -7,7 +7,7 @@ config::setRowGrid(3);
 
 config::setDbHost('localhost');
 config::setDbDriver('pgsql'); // pgsql
-config::setDbName('proyecto_final');
+config::setDbName('proyecto_sainera');
 config::setDbPort(5432); // 5432
 config::setDbUser('postgres');
 config::setDbPassword('sena');
@@ -32,8 +32,8 @@ if (config::getDbUnixSocket() !== null) {
 config::setPathAbsolute('/var/www/html/Proyecto_PorcicolaSainera/');
 config::setUrlBase('http://localhost/Proyecto_PorcicolaSainera/web/');
 
-config::setScope('prod'); // prod
-
+config::setScope('prod'); // dev
+config::setDefaultCulture('es');
 if (session::getInstance()->hasDefaultCulture() === false) {
   config::setDefaultCulture('es');
 } else {

@@ -28,7 +28,7 @@ class insertDetalleVacunacionActionClass extends controllerClass implements cont
                 vacunacionTableClass::ID
             );
 
-            $this->objPorcino = hojaDeVIdaTableClass::getAll($fieldsPorcino, true);
+            $this->objPorcino = hojaDeVidaTableClass::getAll($fieldsPorcino, true);
             $this->objInsumo = insumoTableClass::getAll($fieldsInsumo, true);
             $this->objVacuna = vacunacionTableClass::getAll($fieldsVacuna, true);
             $this->defineView('insert', 'detalleVacunacion', session::getInstance()->getFormatOutput());

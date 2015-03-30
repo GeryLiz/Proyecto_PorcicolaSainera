@@ -18,16 +18,16 @@ class reportVacunacionActionClass extends controllerClass implements controllerA
 
     public function execute() {
         try {
-             
+      
             $fields = array(
                 vacunacionTableClass::ID,
                 vacunacionTableClass::FECHA,
                 vacunacionTableClass::USUARIO_ID
             );
             $this->mensaje = "Informe del Control de Vacunacion";
-            $this->objVacunacion = vacunacionTableClass::getAll($fields, true);
-         
-                log::register(i18n::__('report'), vacunacionTableClass::getNameTable());
+            $this->objVacunacion = vacunacionTableClass::getAll($fields, true, null, null, null, null);
+
+            log::register(i18n::__('report'), vacunacionTableClass::getNameTable());
             $this->defineView('report', 'vacunacion', session::getInstance()->getFormatOutput());
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);

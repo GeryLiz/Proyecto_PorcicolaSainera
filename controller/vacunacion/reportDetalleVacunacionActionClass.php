@@ -18,19 +18,48 @@ class reportDetalleVacunacionActionClass extends controllerClass implements cont
 
     public function execute() {
         try {
-             
-            $fields = array(
-            detalleVacunacionTableClass::ID,
-            detalleVacunacionTableClass::ID_DOC,
-            detalleVacunacionTableClass::ID_INSUMO,
-            detalleVacunacionTableClass::ID_PORCINO,
-            detalleVacunacionTableClass::CANTIDAD
-            );
-            $this->mensajeDetalle = "Informe de Detalles del Control de Vacunacion";
-            $this->objDetalleVacunacion = detalleVacunacionTableClass::getAll($fields, true);
+//            $where = null;
+////            $idVacunacion = request::getInstance()->getRequest(vacunacionTableClass::ID);
+            $idVacunacion = 2;
+            if (request::getInstance()->hasRequest('report')) {
+                $report = request::getInstance()->getPost('report');
+
+                if (isset($report['porcino']) and $report['porcino'] !== null and $report['porcino'] !== '') {
+                    $where[detalleVacunacionTableClass::ID_PORCINO] = $report['porcino'];
+                }
+
+                if (isset($report['insumo']) and $report['insumo'] !== null and $report['insumo'] !== '') {
+                    $where[detalleVacunacionTableClass::ID_INSUMO] = $report['insumo'];
+                }
+            }
+
         
-                log::register(i18n::__('report'), detalleVacunacionTableClass::getNameTable());
-            $this->defineView('reportDetalle', 'vacunacion', session::getInstance()->getFormatOutput());
+
+            $fields = array(
+                detalleVacunacionTableClass::ID,
+                detalleVacunacionTableClass::ID_DOC,
+                detalleVacunacionTableClass::ID_INSUMO,
+                detalleVacunacionTableClass::ID_PORCINO,
+                detalleVacunacionTableClass::CANTIDAD
+            );
+
+
+            $fieldsVacunacion= array(
+            vacunacionTableClass::ID,
+            vacunacionTableClass::FECHA,
+            vacunacionTableClass::USUARIO_ID
+            );
+
+            $whereVacunacion = array(
+            vacunacionTableClass::ID => $idVacunacion
+            );
+           
+            $this->objVacunacion = vacunacionTableClass::getAll($fieldsVacunacion, true, null, null, null, null, $whereVacunacion);
+            $this->mensajeDetalle = "Informe de Detalles del Control de Vacunacion";
+            $this->objDetalleVacunacion = detalleVacunacionTableClass::getAll($fields, true, null, null, null, null, $where);
+            request::getInstance()->getRequest('id');
+            log::register(i18n::__('report'), detalleVacunacionTableClass::getNameTable());
+//            $this->defineView('reportDetalle', 'vacunacion', session::getInstance()->getFormatOutput());
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);
             routing::getInstance()->forward('shfSecurity', 'exception');

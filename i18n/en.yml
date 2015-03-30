@@ -1,0 +1,170 @@
+# Diccionario de ejemplo
+culture:                  English
+dictionary:
+  default:
+    module:               Module
+    Vacunation:           Vaccination
+    user:                 User
+    pass:                 Password
+    register:             Record
+    update:               Actualize
+    registerUpdate:       Updated Record
+    view:                 Visualize
+    registerInsert:       Inserted Record
+    delete:               Remove
+    registerDelete:       Deleted Record
+    deleteMass:           Remove Mass
+    massDeleteRegister:   Mass Delete Records
+    create:               Create
+    confirmDeleteMasive:  Eliminated Confirm Mass
+    want to delete the record?: Want To Delete The Record?
+    action:               Actions
+    confirmDelete:        Confirm Delete
+    new:                  New
+    remove:               Eliminate
+    report:               Report
+    filterBy:             Filter By
+    filters:              Filters
+    removeFilters:        Remove Filters
+    edit:                 Edit
+    cancel:               Cancel
+    confirm:              Confirm
+    close:                Close
+    employee:             Employee
+    viewDetail:           View Detail
+    insertDetail:         Insert Detail
+    search:               Search
+    filterReport:         Report Filters
+    
+        
+  credencial:
+    new:                 NEW CREDENTIAL
+    name:                Name
+    editCredential:      EDIT CREDENTIAL
+    
+  datoUsuario:
+    name:                Name
+    last_name:           Last Name
+    phone:               Phone
+    address:             Address
+    writ:                Warrant
+    newUserData:         NEW USER DATA
+    editUserData:        EDIT USER DATA
+    
+  raza:
+    newRaza:             NEW BREED
+    editRaza:            EDIT BREED
+    
+  ciudad:
+    department:          Departament
+    newCity:             NEW CITY
+    editCity:            EDIT CITY
+    
+  departamento:
+    newDepartment:       NEW DEPARTAMENT
+    editDepartment:      EDIT DEPARTAMENT
+    
+  vacunacion:
+    newVaccination:      NEW VACCINATION
+    editVaccination:     EDIT VACCINATION
+    vaccination:         VACCINATION
+    id_doc:              Document Id
+    date:                Date
+    user:                User
+    N°:                  N°
+    N° Document of Vaccination: N° Vaccination Document
+    
+  detalleFacturaCompraInsumo:
+    newDetailBillPurchaseInput:  New Purchase Invoice Detail Input
+    editDetailBillPurchaseInput: Edit the Purchase Invoice Detail Input
+    id_bill:             Id Bill
+    id:                  Id
+    quantity:            Quantity
+    price:               Price
+    
+  detalleVacunacion:
+    newDetailVaccination:        NEW DETAILS OF VACCINATION
+    editDetailVaccination:       EDIT DETAIL OF VACCINATION
+    id_document:                 Id Document
+    insumo:                      Id Input
+    detailVaccination:           DETAIL VACCINATION
+    
+  facturaCompraInsumo:  
+    newBillPurchaseInput:        New Purchase Invoice Input
+    editBillPurchaseInput:       Edit Input Purchase Invoice
+    iva:                 Iva
+    subtotal:            Subtotal
+    total:               Total
+    
+  modulo:
+    location:            Location
+    size:                SIze
+    
+    edtiModulo:          EDIT MODULE
+    newModulo:           NEW MODULE
+    
+  insumo:
+    value:               Value
+    manufacturing:       Manufacturing
+    expiration:          Expiration
+    line:                Line
+    presentation:        Presentation
+    newInput:            NEW INPUT
+    editInput:           EDIT INPUT
+    input:               Input
+    
+  presentacion:
+    newPresentation:     NEW PRESENTATION
+    editPresentation:    EDIT PRESENTATION
+    
+  linea:
+    newLine:             NEW LINE
+    editLine:            EDIT LINE
+    
+  montar:
+    date:                Date
+    fecundador:          Pig Fecundador
+    state:               State
+    fertilization:       Date Fertilization
+    porcine:             Porcine
+    race:                Race
+    newMount:            MOUNT NEW RECORD
+    editMount:           EDIT RECORD MOUNT
+    
+  hojaDeVida:
+    age:                 Age
+    weight:              Weight
+    gender:              Gender
+    quantity_births:     Number Of Deliveries
+    date_entry:          Date Of Admission
+    module:              Module
+    user_id:             User Id
+    newHoja:             Registering a New Resume
+    editHoja:            Edit Sheet Of Lifetime
+    
+  gestacion:
+    number_males:        Number Males
+    number_females:      Number Females
+    number_living:       Number Living
+    number_dead:         Number Dead
+    responsible:         Responsible
+    date_delivery:       Delivery Date
+    newGestation:        NEW GESTATION
+    editGestation:       EDIT GESTATION
+    
+  bodega:
+    editCellar:          EDIT WINERY
+    newCellar:           NEW WINERY
+    
+  errors:
+    00001:                The module and the action requested does not exist.
+    00002:                The requested address is not registered.
+    00003:                Data username and password are invalid.
+    10003:                Wrong Data
+    10004:                He missed fill fields
+    10005:                Only numeric data allowed
+#    00001:  Lo que buscas no existe
+#    10001:  Existe un error en la definición de los includes
+#    10002:  No hay definido un ambito (dev o prod) para la aplicación
+#    10003:  El arhivo %file% no existe
+#    10004:  El directorio %path% no pudo ser creado

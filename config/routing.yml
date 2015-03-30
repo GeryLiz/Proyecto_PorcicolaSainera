@@ -829,6 +829,10 @@ vacunacion_deleteFiltersVacunacion:
   param: { module: vacunacion, action: deleteFiltersVacunacion, format: html }
   load:
 
+vacunacion_traductor:
+  url:     /traductor/vacunacion
+  param: { module: vacunacion, action: traductorVacunacion, format: html }
+  load:
 
 vacunacion_view:
   url:    /vacunacion/vista
