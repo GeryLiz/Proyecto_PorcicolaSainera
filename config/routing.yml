@@ -377,7 +377,14 @@ raza_deleteSelect:
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
     
-    
+##---------------------------------------------------------------------##
+ 
+bitacora_index:
+  url:    /bitacora/index
+  param:  { module: bitacora, action: index, format: html }
+  load:
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 ##---------------------------------------------------------------------##
  
 bodega_index:

@@ -17,19 +17,18 @@ class traductorVacunacionActionClass extends controllerClass implements controll
 
     public function execute() {
         try {
-           
-   if(request::getInstance()->isMethod('POST') == true){
- 
-       $lenguaje = request::getInstance()->getRequest('lenguaje');
-       $PATH_INFO = request::getInstance()->getServer('PATH_INFO');
-       session::getInstance()->setDefaultCulture($lenguaje);
-    $dir = config::getUrlBase().config::getIndexFile().$PATH_INFO;
-    header('location: '. $dir);
-    
-   }  else {
-   routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
-   }
-            } catch (PDOException $exc) {
+
+            if (request::getInstance()->isMethod('POST') == true) {
+
+                $lenguaje = request::getInstance()->getRequest('lenguaje');
+                $PATH_INFO = request::getInstance()->getServer('PATH_INFO');
+                session::getInstance()->setDefaultCulture($lenguaje);
+                $dir = config::getUrlBase() . config::getIndexFile() . $PATH_INFO;
+                header('location: ' . $dir);
+            } else {
+                routing::getInstance()->redirect('vacunacion', 'indexVacunacion');
+            }
+        } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);
             routing::getInstance()->forward('shfSecurity', 'exception');
         }

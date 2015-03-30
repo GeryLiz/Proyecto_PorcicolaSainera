@@ -32,7 +32,7 @@ if (config::getDbUnixSocket() !== null) {
 config::setPathAbsolute('/var/www/html/Proyecto_PorcicolaSainera/');
 config::setUrlBase('http://localhost/Proyecto_PorcicolaSainera/web/');
 
-config::setScope('prod'); // dev
+config::setScope('dev'); // prod
 config::setDefaultCulture('es');
 if (session::getInstance()->hasDefaultCulture() === false) {
   config::setDefaultCulture('es');

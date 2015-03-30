@@ -26,12 +26,15 @@ class createDetalleVacunacionActionClass extends controllerClass implements cont
                 $id_insumo = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::ID_INSUMO, true));
                 $cantidad = request::getInstance()->getPost(detalleVacunacionTableClass::getNameField(detalleVacunacionTableClass::CANTIDAD, true));
 
+                if (isset($cantidad) and $cantidad !== null and $cantidad !== ''){
+                    throw new PDOException(i18n::__(10004, null, 'errors'));
+                }
+                
+                if (!is_numeric($cantidad)) {
+                    throw new PDOException(i18n::__(10005, null, 'errors'));
+                }
+              
 
-             if(!is_numeric($cantidad)){
-                 throw new PDOException(i18n::__(10005, null, 'errors'));
-             }
-//                
-           
 
                 $data = array(
                     detalleVacunacionTableClass::ID_DOC => $id_doc,

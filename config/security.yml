@@ -16,6 +16,12 @@ home:
     credentials:
       - [admin]
 
+bitacora:
+  index:
+    security: true
+    credentials:
+      - [admin]
+
 default:
   index:
     security: true
